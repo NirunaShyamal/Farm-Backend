@@ -1,0 +1,49 @@
+{
+  "name": "farm-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Farm Management System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node start-server.js",
+    "start:basic": "node server.js",
+    "dev": "nodemon start-server.js",
+    "dev:basic": "nodemon server.js",
+    "test": "node test-complete-system.js",
+    "test:all": "node test-all-apis.js",
+    "test:frontend": "node test-frontend-integration.js",
+    "test:database": "node test-database.js",
+    "test:complete": "node test-complete-system.js",
+    "db:init": "node src/scripts/initDatabase.js",
+    "db:seed": "node src/scripts/seedDatabase.js",
+    "db:backup": "node src/scripts/backupDatabase.js backup",
+    "db:restore": "node src/scripts/backupDatabase.js restore",
+    "db:list": "node src/scripts/backupDatabase.js list",
+    "db:cleanup": "node src/scripts/backupDatabase.js cleanup",
+    "db:status": "node src/scripts/checkDatabaseStatus.js",
+    "setup": "node setup.js",
+    "fix-db": "node src/scripts/initDatabase.js && node src/scripts/checkDatabaseStatus.js"
+  },
+  "keywords": [
+    "farm",
+    "management",
+    "api",
+    "mongodb"
+  ],
+  "author": "Niruna",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.12.2",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.18.1",
+    "node-cron": "^4.2.1",
+    "nodemailer": "^7.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "type": "commonjs"
+}
